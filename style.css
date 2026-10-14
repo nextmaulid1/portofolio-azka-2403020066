@@ -1,0 +1,345 @@
+/* Portofolio Azka Maulidi — kombinasi merah, oranye, kuning, krem */
+:root {
+  --merah: #ed3b20;
+  --oranye: #ff6a00;
+  --kuning: #ffb932;
+  --krem: #ffdda0;
+  --warna-latar: #fff8ef;
+  --warna-teks: #33221d;
+  --warna-kartu: #ffffff;
+  --garis: rgba(237, 59, 32, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--warna-latar);
+  color: var(--warna-teks);
+  line-height: 1.7;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 248, 239, 0.96);
+  border-bottom: 1px solid var(--garis);
+  box-shadow: 0 3px 14px rgba(88, 42, 21, 0.06);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.menu a {
+  color: var(--warna-teks);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+  background: var(--merah);
+  color: white;
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  min-height: 520px;
+  padding: 88px 20px 95px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--merah) 0%,
+    var(--oranye) 43%,
+    var(--kuning) 73%,
+    var(--krem) 100%
+  );
+  border-radius: 0 0 28px 28px;
+  overflow: hidden;
+}
+
+/* LOGO PROFIL */
+.header .inisial {
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 18px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.header .inisial img {
+  width: 300px;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+.eyebrow,
+.section-kicker,
+.project-number {
+  color: #fff4db;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.header h1 {
+  margin: 40px 0 4px;
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.1;
+  text-shadow: 0 3px 12px rgba(120, 35, 12, 0.16);
+}
+
+.subjudul {
+  margin: 10px 0 0;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #fffaf3;
+}
+
+.nim {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: rgba(125, 38, 12, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+}
+
+.cta {
+  margin-top: 24px;
+  color: white;
+  background: var(--merah);
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 7px 18px rgba(151, 42, 14, 0.18);
+}
+
+.cta span {
+  padding-left: 8px;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 22px 60px;
+}
+
+section {
+  margin: 56px 0;
+  scroll-margin-top: 85px;
+}
+
+.section-kicker {
+  color: var(--merah);
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: clamp(25px, 4vw, 32px);
+  margin: 0 0 18px;
+  color: #3a251d;
+}
+
+.section-desc {
+  color: #7c6256;
+  margin-top: -8px;
+}
+
+.kotak-info,
+.contact-card {
+  background: var(--warna-kartu);
+  border: 1px solid var(--garis);
+  border-left: 5px solid var(--oranye);
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 9px 28px rgba(96, 48, 25, 0.05);
+}
+
+.kotak-info p:first-child,
+.contact-card p:first-child {
+  margin-top: 0;
+}
+
+/* KEAHLIAN */
+.daftar-keahlian {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.label {
+  background: #fff0dc;
+  border: 1px solid #ffc27a;
+  color: #79321d;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.skill-group {
+  margin-top: 24px;
+}
+
+.skill-group h3 {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #79321d;
+}
+
+/* PROYEK */
+.grid-proyek {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.kartu {
+  background: var(--warna-kartu);
+  border: 1px solid var(--garis);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(96, 48, 25, 0.07);
+  border-top: 5px solid var(--merah);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.kartu:nth-child(2) {
+  border-top-color: var(--kuning);
+}
+
+.kartu:hover {
+  transform: translateY(-4px);
+  border-color: var(--oranye);
+}
+
+.kartu h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.kartu p {
+  color: #745d52;
+}
+
+.project-number {
+  color: var(--oranye);
+}
+
+.teknologi {
+  font-size: 13px;
+  color: #c44522 !important;
+  margin-bottom: 0;
+}
+
+.catatan {
+  color: #7c6256;
+  font-size: 12px;
+}
+
+/* INFORMASI WEBSITE */
+.metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.metadata div {
+  display: flex;
+  flex-direction: column;
+  min-width: 130px;
+  gap: 3px;
+}
+
+.metadata span {
+  color: #8b7165;
+  font-size: 12px;
+}
+
+.versi {
+  display: inline-block;
+  background: var(--kuning);
+  color: #482819;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* KONTAK DAN FOOTER */
+.contact-card a {
+  color: #d54120;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 16px;
+  color: #8b7165;
+  font-size: 13px;
+  border-top: 1px solid var(--garis);
+}
+
+/* TAMPILAN MOBILE */
+@media (max-width: 600px) {
+  .header {
+    min-height: 460px;
+    padding: 65px 16px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .menu {
+    gap: 2px;
+    padding: 8px 4px;
+  }
+
+  .menu a {
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+
+  main {
+    padding: 20px 16px 45px;
+  }
+
+  section {
+    margin: 42px 0;
+  }
+
+  .kotak-info,
+  .contact-card {
+    padding: 18px;
+  }
+}
